@@ -1,0 +1,12 @@
+{
+  "name": "@rwheale/cordova-test",
+  "version": "0.0.0",
+  "private": true,
+  "description": "A place to test out cordova, feathers, and other things",
+  "workspaces": [
+    "api"
+  ],
+  "scripts": {},
+  "author": "Ryan Wheale <ryan.wheale@gmail.com>",
+  "license": "ISC"
+}
