@@ -1,15 +1,9 @@
 {
-  "name": "api",
+  "name": "@rwheale/api",
   "description": "Api service for application",
   "version": "0.0.0",
-  "homepage": "",
+  "type": "module",
   "private": true,
-  "keywords": [
-    "feathers"
-  ],
-  "author": {},
-  "contributors": [],
-  "bugs": {},
   "engines": {
     "node": ">= 20.18.0"
   },
@@ -33,14 +27,13 @@
     "lib/**/*.d.ts",
     "lib/**/*.shared.js"
   ],
-  "main": "lib/client",
+  "main": "dist/client",
   "scripts": {
-    "dev": "nodemon -x ts-node src/index.ts",
-    "compile": "shx rm -rf lib/ && tsc",
-    "start": "node lib/",
+    "dev": "tsx src/index.ts",
+    "compile": "rimraf dist/ && tsc",
+    "start": "node dist/",
     "prettier": "npx prettier \"**/*.ts\" --write",
-    "mocha": "cross-env NODE_ENV=test mocha test/ --require ts-node/register --recursive --extension .ts --exit",
-    "test": "npm run mocha",
+    "test": "vitest",
     "bundle:client": "npm run compile && npm pack --pack-destination ./public"
   },
   "dependencies": {
@@ -59,16 +52,6 @@
   },
   "devDependencies": {
     "@feathersjs/cli": "^5.0.31",
-    "@feathersjs/rest-client": "^5.0.31",
-    "@types/mocha": "^10.0.9",
-    "@types/node": "^22.9.0",
-    "axios": "^1.7.7",
-    "cross-env": "^7.0.3",
-    "mocha": "^10.8.2",
-    "nodemon": "^3.1.7",
-    "prettier": "^3.3.3",
-    "shx": "^0.3.4",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.6.3"
+    "@feathersjs/rest-client": "^5.0.31"
   }
 }

@@ -1,6 +1,5 @@
-import assert from 'assert'
+import { describe, it, expect } from 'vitest'
 import axios from 'axios'
-import type { Server } from 'http'
 import { app } from '../src/app'
 import { createClient } from '../src/client'
 
@@ -13,6 +12,6 @@ describe('client tests', () => {
   const client = createClient(rest(appUrl).axios(axios))
 
   it('initialized the client', () => {
-    assert.ok(client)
+    expect(client).toBeDefined();
   })
 })
