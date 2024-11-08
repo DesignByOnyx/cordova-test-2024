@@ -4,7 +4,8 @@
   "private": true,
   "description": "A place to test out cordova, feathers, and other things",
   "workspaces": [
-    "api"
+    "api",
+    "ui"
   ],
   "scripts": {},
   "author": "Ryan Wheale <ryan.wheale@gmail.com>",
